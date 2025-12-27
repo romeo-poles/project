@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	<link rel="stylesheet" href="style.css">
+	<title>Project</title>
+    </head>
+    <body>
+
+	<main>
+        <canvas></canvas>
+        <div id="menu">
+            <div id="selectName">
+                <input type="text" id="name" placeholder="Entrez votre pseudo">
+                <button class="Submit" onclick="Submit()">OK</button>
+            </div>
+            <div id="welcome"></div>
+            <button class="jeu" onclick="Go_play()">Play game</button>
+            <button class="shop" onclick="Go_shop()">Magasin</button>
+        </div>
+
+        <div id="gamemode">
+            <button class="classique" onclick="Classique()">Mode Classique</button>
+            <button class="objets" onclick="Objets()">Mode Objets</button>  
+        </div>
+
+        <div id="magasin">
+            <div class="magasin-content" augmented-ui="exe tl-clip br-clip">
+                <div class="magasin-title" augmented-ui="exe tl-clip br-clip">Shop</div>
+
+                <div class="magasin-items">
+                    <div class="item" onclick="dispo(this)">
+                        <div id ="box" class="skin-box"><img class="skin_shop" src="images/skins/ninja.png"></div> Un ninja discret et agile, forgé pour les premiers combats.
+                    </div>
+                    <div class="item" onclick="dispo(this)">
+                        <div id ="box" class="skin-box_lock"><img class="skin_shop" src="images/skins/pirate.png"><img class="lock" src="images/cadenas.png"></div> Un pirate féroce dont la rage évoque les rivages brûlants.
+                    </div>
+                    <div class="item" onclick="dispo(this)">
+                        <div id ="box" class="skin-box_lock"><img class="skin_shop" src="images/skins/pirate_bleu.png"><img class="lock" src="images/cadenas.png"></div> Un marin sombre, marqué par la lumière froide du crépuscule.
+                    </div>
+                    <div class="item" onclick="dispo(this)">
+                        <div id ="box" class="skin-box_lock"><img class="skin_shop" src="images/skins/ninja_blanc.png"><img class="lock" src="images/cadenas.png"></div> Une silhouette silencieuse, née sous les ombres de la nuit.
+                    </div>
+                    <div class="item" onclick="dispo(this)">
+                        <div id ="box" class="skin-box_lock"><img class="skin_shop" src="images/skins/chevalier.png"><img class="lock" src="images/cadenas.png"></div> Un guerrier d'acier, endurci par la chaleur des flammes éternelles.
+                    </div>
+                    <div class="item" onclick="dispo(this)">
+                        <div id ="box" class="skin-box_lock"><img class="skin_shop" src="images/skins/astro.png"><img class="lock" src="images/cadenas.png"></div> Un explorateur solitaire, habitué aux confins de l'espace.
+                    </div>
+                    <div class="item" onclick="dispo(this)">
+                        <div id ="box" class="skin-box_lock"><img class="skin_shop" src="images/skins/explorateur.png"><img class="lock" src="images/cadenas.png"></div> Un être instable, transformé par une énergie mortelle.
+                    </div>
+                    <div class="item" onclick="dispo(this)">
+                        <div id ="box" class="skin-box_lock"><img class="skin_shop" src="images/skins/ninja_gold.png"><img class="lock" src="images/cadenas.png"></div> Une légende vivante, symbole de la maîtrise absolue.
+                    </div>
+                </div>
+
+                <button class="jeu" onclick="Quit_shop()">Fermer</button>
+            </div>
+        </div>
+
+
+        <div id="jeu">
+            <div id="score">Score  :  0</div>
+            <div id="highScore">High Score :</div>
+            <img class="player" id="player" src="images/skins/ninja.png">
+        </div>
+
+        <div id="game-alert" class="game-alert hidden">
+            <div class="message" augmented-ui="exe tl-clip br-clip">
+                <div class="title" augmented-ui="exe tl-clip br-clip">Mission realisee !</div>
+                <div class="content">
+                    <p id="game-alert-text">Texte de l alerte</p>
+                    <img id="game-alert-icon" src="images/skins/ninja_gold.png">
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="lose">
+            <div class="game_over">Game over</div>
+            <div id="losescore">Votre score est : </div>
+            <div id="leaderboard">leaderboard :
+            <ul>
+                <li id="score1">Point 1</li>
+                <li id="score2">Point 2</li>
+                <li id="score3">Point 3</li>
+                <li id="score4">Point 4</li>
+                <li id="score5">Point 5</li>
+            </ul>
+            </div>
+            <button class="jeu" onclick="Objets()">Rejouer</button>
+            <button class="shop" onclick="Go_menu()">Menu</button>
+        </div>
+        
+    </main>
+<script src="script.js"></script>
+    </body>
+</html>
+
