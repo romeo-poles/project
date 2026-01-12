@@ -1,4 +1,3 @@
-/* == VARIABLES == */
 let backMusic = new Audio("music/background.mp3");
 let playGame = new Audio("music/play.wav");
 let gameOver = new Audio("music/gameover.wav");
@@ -423,9 +422,6 @@ function dispo(item_clique) {
       skinActuel = skins[skins_dispo.indexOf(src_item)][0];
       skinActuelReverse = skins[skins_dispo.indexOf(src_item)][1];
     }
-  }
-  else {
-    alert("c'est verouille pauvre con");
   }
 }
 
