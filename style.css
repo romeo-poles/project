@@ -230,7 +230,7 @@ body {
 }
 #leaderboard {
   position: absolute;
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(255, 255, 255);
   font-family: 'Minecraft', monospace;
 }

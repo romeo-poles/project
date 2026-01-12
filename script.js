@@ -24,6 +24,7 @@ let score = 0;
 let compteurFruit = 0;
 let currentObject = [];
 let fruitsActifs = [];
+let lastMode = "";
 let speed = 2;
 let skins_dispo = ["images/skins/ninja.png"];
 let largeurJeu = window.innerWidth;
@@ -656,11 +657,21 @@ function Quit_shop(){
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+function rejouer(){
+  if (lastMode=="Classique"){
+    Classique();
+  }
+  else{
+    Objets();
+  }
+
+}
 
 /* == MODES DE JEU == */
 let leaderboard = [];
 async function Classique(){
   score = 0;
+  lastMode = "Classique";
   GameOver = false;
   document.body.style.backgroundImage = 'url("images/back/temple.png")';
   Xplayer = (window.innerWidth - 70)/2;
@@ -697,6 +708,7 @@ losescoreElement.textContent = "Votre score est  " + score;
 
 async function Objets(){
   score = 0;
+  lastMode = "Objets";
   let lastLevel = -1;
   let level = -1;
   let delay = 175000/largeurJeu;
