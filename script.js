@@ -1,3 +1,4 @@
+/* == VARIABLES == */
 let backMusic = new Audio("music/background.mp3");
 let playGame = new Audio("music/play.wav");
 let gameOver = new Audio("music/gameover.wav");
